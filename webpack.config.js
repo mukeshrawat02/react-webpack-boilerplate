@@ -8,20 +8,22 @@ module.exports = {
     entry:"./app/App.js",
     output:{
         path: path.resolve(__dirname, "public"),
-        filename:"bundle.js"
+        filename:"bundle.min.js"
     },
     resolve:{
-        extensions: ['', '.js','.jsx','.scss']
+        extensions: ['', '.js']
     },
     module:{
         loaders:[
             {
-                loaders: ['react-hot', 'babel-loader'],
+                test:/\.js?$/,
+                loader: 'babel-loader',
                 query:{
-                    presets:['react','es2015']
+                    presets:['react','es2015'],
+                    plugins:['react-html-attrs','react-hot-loader/babel']
                 },
-                test:/\.jsx?$/,
-                exclude:/node_modules/
+                exclude:/node_modules/,
+                include: path.join(__dirname, 'app') 
             },
             {
                 test: /\.scss$/, 
@@ -38,7 +40,7 @@ module.exports = {
              [
                  new webpack.optimize.DedupePlugin(),
                  new webpack.optimize.OccurenceOrderPlugin(),
-                 new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+                 new webpack.optimize.UglifyJsPlugin({ minimize: true, mangle: false, sourcemap: false }),
                  new ExtractTextPlugin('main.css',{
                     allChunks: true
                  })
