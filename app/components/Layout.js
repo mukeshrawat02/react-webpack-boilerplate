@@ -15,7 +15,9 @@ class Layout extends React.Component{
         return(
             <section>
                 <Header />
-                <h1> The Boilerplate App </h1>
+                <div class='container mainbox'>
+                    <h1> Welcome! </h1>
+                </div>
                 <Footer />
             </section>
         );

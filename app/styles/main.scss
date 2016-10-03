@@ -16,6 +16,36 @@ body {
     color:white;
 }
 
+.navbar {
+    margin-bottom: 0;
+    background-color:  $red;
+    z-index: 9999;
+    border: 0;
+    font-size: $fontSize-14 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 2px;
+
+    li a, .navbar-brand{
+       color: white !important;   
+    }
+}
+
+.navbar-nav li{ 
+    a:hover, &.active a {
+        color:  $red !important;
+        background-color: white !important;
+    }
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff;
+}
+
+.mainbox {
+    margin-top: 100px;
+}
+
 .footer {
     position: fixed;
     height: 30px;

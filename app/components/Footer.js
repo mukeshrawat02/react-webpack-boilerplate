@@ -3,9 +3,11 @@ import React from "react";
 class Footer extends React.Component{
     render(){
         return(
-            <section>
-                <span> Footer </span>
-            </section>
+            <div class="container text-center footer">
+                <p>
+                    Copyright © 2016. All rights reserved
+                </p>
+            </div>
         );
     }
 }

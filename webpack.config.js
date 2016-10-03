@@ -33,9 +33,9 @@ module.exports = {
     },
     plugins: debug ? 
              [
-                 new ExtractTextPlugin('main.css',{
-                 allChunks: true
-                })
+                new ExtractTextPlugin('main.css',{
+                    allChunks: true
+                 })
              ] : 
              [
                  new webpack.optimize.DedupePlugin(),
