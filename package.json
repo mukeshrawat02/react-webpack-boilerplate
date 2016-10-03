@@ -1,0 +1,27 @@
+{
+  "name": "react-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple react webpack boilerplate application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukeshrawat02/react-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "react js",
+    "webpack"
+  ],
+  "author": "Mukesh Rawat",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}
