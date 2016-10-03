@@ -1,6 +1,29 @@
-$font-size: 12px;
+$fontSize-14: 14px;
+$fontSize-20: 20px;
+$red: #E23A0B;
 
 body {
-    font-size: $font-size;
+    font-size: $fontSize-14;
+    line-height: 1.8;
+    color: #818181;
+    background-color:white;
+    font-family: Montserrat, sans-serif;
+}
+
+.logo-container {
+    font-family: 'Tillana', cursive;
+    font-size: $fontSize-20;
+    color:white;
+}
+
+.footer {
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    font-size: $fontSize-14;
+    padding: 5px 0;
+    background-color: $red;
+    color: white;
 }
 

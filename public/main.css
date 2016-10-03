@@ -1,0 +1,23 @@
+body {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #818181;
+  background-color: white;
+  font-family: Montserrat, sans-serif; }
+
+.logo-container {
+  font-family: 'Tillana', cursive;
+  font-size: 20px;
+  color: white; }
+
+.footer {
+  position: fixed;
+  height: 30px;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 0;
+  background-color: #E23A0B;
+  color: white; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
