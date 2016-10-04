@@ -14,7 +14,7 @@ class Header extends React.Component{
                             </button>
                             <a class="navbar-brand">
                                 <i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp;
-                                <span class="logo-container">react boilerplate</span>
+                                <span class="logo-container">React</span>
                             </a>
                         </div>
                     </div>

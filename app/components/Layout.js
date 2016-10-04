@@ -1,22 +1,15 @@
 import React from "react";
 
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "footer";
+import Header from "header";
 
 class Layout extends React.Component{
-    constructor(){
-        super();
-        this.state ={
-            headerTitle: "Welcome to boilerplate app"
-        }
-    }
-
     render(){
         return(
             <section>
                 <Header />
                 <div class='container mainbox'>
-                    <h1> Welcome! </h1>
+                    <h1> Welcome to React Boilerplat application! </h1>
                 </div>
                 <Footer />
             </section>

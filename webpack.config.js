@@ -11,6 +11,12 @@ module.exports = {
         filename:"bundle.min.js"
     },
     resolve:{
+        root: path.resolve(__dirname, "app"),
+        alias:{
+            layout: 'components/Layout',
+            header: 'components/Header',
+            footer: 'components/Footer'
+        },
         extensions: ['', '.js']
     },
     module:{
@@ -19,7 +25,7 @@ module.exports = {
                 test:/\.js?$/,
                 loader: 'babel-loader',
                 query:{
-                    presets:['react','es2015'],
+                    presets:['react','es2015','stage-0'],
                     plugins:['react-html-attrs','react-hot-loader/babel']
                 },
                 exclude:/node_modules/,
