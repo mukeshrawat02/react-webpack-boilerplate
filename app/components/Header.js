@@ -13,7 +13,6 @@ class Header extends React.Component{
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand">
-                                <i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp;
                                 <span class="logo-container">React</span>
                             </a>
                         </div>
