@@ -5,14 +5,14 @@ var path = require("path");
 
 module.exports = {
     devtool: debug ? "inline-sourcemap" : null,
-    entry:"./app/App.js",
-    output:{
+    entry: "./app/App.js",
+    output: {
         path: path.resolve(__dirname, "public"),
         filename:"bundle.min.js"
     },
-    resolve:{
+    resolve: {
         root: path.resolve(__dirname, "app"),
-        alias:{
+        alias: {
             layout: 'components/Layout',
             header: 'components/Header',
             footer: 'components/Footer'
@@ -20,11 +20,11 @@ module.exports = {
         extensions: ['', '.js']
     },
     module:{
-        loaders:[
+        loaders: [
             {
                 test:/\.js?$/,
                 loader: 'babel-loader',
-                query:{
+                query: {
                     presets:['react','es2015','stage-0'],
                     plugins:['react-html-attrs','react-hot-loader/babel']
                 },
@@ -37,18 +37,23 @@ module.exports = {
             }
         ]
     },
-    plugins: debug ? 
-             [
-                new ExtractTextPlugin('main.css',{
-                    allChunks: true
-                 })
-             ] : 
-             [
-                 new webpack.optimize.DedupePlugin(),
-                 new webpack.optimize.OccurenceOrderPlugin(),
-                 new webpack.optimize.UglifyJsPlugin({ minimize: true, mangle: false, sourcemap: false }),
-                 new ExtractTextPlugin('main.css',{
-                    allChunks: true
-                 })
-             ]
+    plugins: 
+       debug ? 
+          [
+             new ExtractTextPlugin('main.css',{
+                 allChunks: true
+             })
+          ] : 
+          [
+             new webpack.optimize.DedupePlugin(),
+             new webpack.optimize.OccurenceOrderPlugin(),
+             new webpack.optimize.UglifyJsPlugin({ 
+                 minimize: true,
+                 mangle: false, 
+                 sourcemap: false 
+             }),
+             new ExtractTextPlugin('main.css',{
+                 allChunks: true
+             })    
+          ]
 }
